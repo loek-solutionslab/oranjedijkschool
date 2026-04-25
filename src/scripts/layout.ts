@@ -156,15 +156,15 @@ export function mountLayout(): void {
   if (top && !isSL) {
     top.innerHTML = announcementBar() + navHTML(path);
   } else if (top && isSL) {
-    // SL page only gets a slim header — no announcement bar (we are the bar)
+    // SL page slim header — pure black, yellow bullet, Bricolage logo
     top.innerHTML = `
-      <header class="bg-[#0B0E1A] border-b border-white/5">
-        <div class="container-page py-5 flex items-center justify-between">
-          <a href="/pages/solutionslab.html" class="flex items-center gap-2 sl-bricolage text-white text-lg lowercase font-semibold">
-            <span class="w-2.5 h-2.5 rounded-full bg-[#FFD500]"></span>
+      <header style="background:#0a0a0a;border-bottom:1px solid #1f1f1f;">
+        <div class="sl-container" style="display:flex;align-items:center;justify-content:space-between;padding-top:20px;padding-bottom:20px;">
+          <a href="/pages/solutionslab.html" style="display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-family:'Bricolage Grotesque',system-ui,sans-serif;font-weight:700;font-size:1.25rem;letter-spacing:-0.02em;color:#fafafa;text-transform:lowercase;">
+            <span style="width:14px;height:14px;border-radius:50%;background:#FFD500;display:inline-block;flex-shrink:0;"></span>
             solutions lab
           </a>
-          <a href="/" class="text-xs text-white/60 hover:text-white transition flex items-center gap-2">
+          <a href="/" style="font-family:'DM Sans',system-ui,sans-serif;font-size:0.85rem;color:#a3a3a3;text-decoration:none;letter-spacing:0.02em;transition:color 200ms;" onmouseover="this.style.color='#FFD500'" onmouseout="this.style.color='#a3a3a3'">
             ← back to oranjedijkschool.com
           </a>
         </div>
@@ -176,10 +176,15 @@ export function mountLayout(): void {
     footer.innerHTML = footerHTML();
   } else if (footer && isSL) {
     footer.innerHTML = `
-      <footer class="bg-[#0B0E1A] border-t border-white/5 py-10">
-        <div class="container-page flex flex-col sm:flex-row gap-4 justify-between items-center text-xs text-white/40 sl-bricolage">
-          <div>● solutions lab — solutionslab.nl</div>
-          <a href="mailto:loek@solutionslab.nl" class="hover:text-[#FFD500] transition">loek@solutionslab.nl</a>
+      <footer style="background:#0a0a0a;border-top:1px solid #1f1f1f;padding:40px 0;">
+        <div class="sl-container" style="display:flex;flex-direction:column;gap:16px;justify-content:space-between;align-items:center;font-family:'DM Sans',system-ui,sans-serif;font-size:0.8rem;color:#a3a3a3;">
+          <div style="display:inline-flex;align-items:center;gap:8px;">
+            <span style="width:8px;height:8px;border-radius:50%;background:#FFD500;display:inline-block;"></span>
+            solutions lab — solutionslab.nl
+          </div>
+          <a href="mailto:loek@solutionslab.nl" style="color:#a3a3a3;text-decoration:none;letter-spacing:0.02em;" onmouseover="this.style.color='#FFD500'" onmouseout="this.style.color='#a3a3a3'">
+            loek@solutionslab.nl
+          </a>
         </div>
       </footer>
     `;

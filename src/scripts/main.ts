@@ -3,9 +3,10 @@ import { mountLayout } from "./layout";
 
 mountLayout();
 
-// Cookie consent (simple, dismissible)
+// Cookie consent (simple, dismissible) — skip on /solutionslab (English-only audit page)
 (() => {
   if (typeof window === "undefined") return;
+  if (window.location.pathname.endsWith("solutionslab.html")) return;
   const KEY = "ods-cookie-ok";
   if (localStorage.getItem(KEY)) return;
   const el = document.createElement("div");
