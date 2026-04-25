@@ -25,5 +25,6 @@ export default defineConfig({
   preview: {
     host: '0.0.0.0',
     port: 5173,
+    allowedHosts: ['.railway.app', '.up.railway.app'],
   },
 })
