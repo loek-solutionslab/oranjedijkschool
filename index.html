@@ -117,34 +117,42 @@
 
         <div class="lg:col-span-5 relative fade-up fade-up-delay-1">
           <div class="relative">
-            <!-- Big stat card -->
-            <div class="card-warm relative z-10 p-10">
-              <div class="text-7xl sm:text-8xl font-display font-extrabold text-orange-600 leading-none">30</div>
-              <div class="mt-2 text-2xl font-display font-bold text-canal-900">jaar Nederlands onderwijs</div>
-              <div class="mt-1 text-ink-soft">in de regio Barcelona — sinds 1992</div>
-
-              <div class="mt-8 pt-8 border-t border-orange-100 grid grid-cols-3 gap-4">
-                <div>
-                  <div class="text-3xl font-display font-bold text-canal-900">150+</div>
-                  <div class="text-xs uppercase tracking-wide text-ink-muted mt-1">Leerlingen</div>
-                </div>
-                <div>
-                  <div class="text-3xl font-display font-bold text-canal-900">3</div>
-                  <div class="text-xs uppercase tracking-wide text-ink-muted mt-1">Locaties</div>
-                </div>
-                <div>
-                  <div class="text-3xl font-display font-bold text-canal-900">4–18</div>
-                  <div class="text-xs uppercase tracking-wide text-ink-muted mt-1">Jaar</div>
-                </div>
+            <!-- Hero photo: 25-jarig jubileum foto van de echte school -->
+            <div class="relative overflow-hidden rounded-[var(--radius-card)] aspect-[4/5] shadow-[var(--shadow-warm)]">
+              <img
+                src="https://static.wixstatic.com/media/f693eb_1d155a7ef542443e8fd8970859884d8e~mv2.jpg/v1/fill/w_800,h_1000,al_c,q_85,enc_auto/jubileum.jpg"
+                alt="Leerlingen van de Oranje-Dijkschool tijdens het jubileum"
+                class="w-full h-full object-cover"
+                loading="eager"
+                fetchpriority="high"
+              />
+              <!-- Overlay: 30-jaar badge -->
+              <div class="absolute top-5 left-5 bg-cream text-canal-900 px-4 py-3 rounded-2xl shadow-lg">
+                <div class="text-3xl font-display font-extrabold text-orange-600 leading-none">30</div>
+                <div class="text-[11px] font-bold uppercase tracking-wider text-canal-700 mt-0.5">jaar in Catalunya</div>
               </div>
             </div>
 
-            <!-- Floating decorative cards -->
-            <div class="hidden sm:flex absolute -bottom-6 -left-8 bg-canal-900 text-white p-5 rounded-2xl shadow-2xl rotate-[-4deg] z-20 float-anim items-center gap-3 max-w-[260px]">
-              <div class="w-12 h-12 rounded-full bg-orange-500 flex items-center justify-center flex-shrink-0">
-                <span class="text-2xl">🌷</span>
+            <!-- Stat card overlapping below -->
+            <div class="relative z-10 -mt-12 mx-3 sm:mx-6 card-warm p-7 grid grid-cols-3 gap-3 bg-white">
+              <div>
+                <div class="text-3xl font-display font-bold text-canal-900">150+</div>
+                <div class="text-[11px] uppercase tracking-wide text-ink-muted mt-1">Leerlingen</div>
               </div>
-              <div class="text-sm leading-snug">
+              <div class="border-x border-orange-100 px-2">
+                <div class="text-3xl font-display font-bold text-canal-900">3</div>
+                <div class="text-[11px] uppercase tracking-wide text-ink-muted mt-1">Locaties</div>
+              </div>
+              <div>
+                <div class="text-3xl font-display font-bold text-canal-900">4–18</div>
+                <div class="text-[11px] uppercase tracking-wide text-ink-muted mt-1">Jaar</div>
+              </div>
+            </div>
+
+            <!-- Floating callout: ambassadeur felicitatie -->
+            <div class="hidden md:flex absolute -bottom-2 -left-6 bg-canal-900 text-white p-4 rounded-2xl shadow-2xl rotate-[-4deg] z-20 float-anim items-center gap-3 max-w-[240px]">
+              <div class="w-10 h-10 rounded-full bg-orange-500 flex items-center justify-center flex-shrink-0 text-lg">●</div>
+              <div class="text-xs leading-snug">
                 <div class="font-bold">Felicitatie van</div>
                 <div class="text-orange-300">NL Ambassadeur Roel Nieuwenkamp</div>
               </div>
@@ -202,6 +210,35 @@
             </div>
             <h3 class="text-xl font-bold mb-3 text-white">3 locaties, 3 momenten</h3>
             <p class="text-canal-100/75 leading-relaxed text-[15px]">Maandagmiddag in Sant Cugat, dinsdagmiddag in Barcelona, zaterdagochtend in Castelldefels. We sluiten aan bij het ritme van uw gezin.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MOMENTS GALLERY -->
+    <section class="py-20 sm:py-24" data-animate>
+      <div class="container-page">
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-12">
+          <div class="max-w-2xl">
+            <span class="eyebrow mb-5">Bij ons op school</span>
+            <h2 class="font-display text-3xl sm:text-4xl font-bold text-canal-900 leading-tight">
+              Boeken, taal, leren, lachen.
+            </h2>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div class="aspect-[4/5] rounded-[var(--radius-card)] overflow-hidden bg-orange-100">
+            <img src="https://static.wixstatic.com/media/f693eb_c0d4bcf4dbfc40f88075a074f579b720~mv2.jpg/v1/fill/w_600,h_750,al_c,q_85,enc_auto/boekenkast.jpg" alt="Boekenkast met Nederlandse kinderboeken" loading="lazy" class="w-full h-full object-cover" />
+          </div>
+          <div class="aspect-[4/5] rounded-[var(--radius-card)] overflow-hidden sm:translate-y-8 bg-canal-100">
+            <img src="https://static.wixstatic.com/media/f693eb_39118f10157b4bc1b04390e5c82760fb~mv2.jpg/v1/fill/w_600,h_750,al_c,q_85,enc_auto/boeken.jpg" alt="Stapels Nederlandse leesboeken" loading="lazy" class="w-full h-full object-cover" />
+          </div>
+          <div class="aspect-[4/5] rounded-[var(--radius-card)] overflow-hidden bg-orange-200">
+            <img src="https://static.wixstatic.com/media/f693eb_43ca449534f849afbb87fab421194cab~mv2.jpg/v1/fill/w_600,h_750,al_c,q_85,enc_auto/spagaat.jpg" alt="Activiteit op de Oranje-Dijkschool" loading="lazy" class="w-full h-full object-cover" />
+          </div>
+          <div class="aspect-[4/5] rounded-[var(--radius-card)] overflow-hidden sm:translate-y-8 bg-tulip-500/10">
+            <img src="https://static.wixstatic.com/media/f693eb_4be18aa92e834e86aac3a7207a886fd0~mv2.jpg/v1/fill/w_600,h_750,al_c,q_85,enc_auto/leerlingen.jpg" alt="Leerlingen tijdens de les" loading="lazy" class="w-full h-full object-cover" />
           </div>
         </div>
       </div>
